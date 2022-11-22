@@ -1,0 +1,29 @@
+import random
+
+random_number = random.randint(1, 100)
+
+for x in range(0, 5):
+    win = False
+    user_input = input(">")
+    num = int(user_input)
+    if random_number == num:
+        print("congratulations!!")
+        win = True
+        break
+    elif random_number > num:
+        print("too small")
+    elif random_number < num:
+        print("too big")
+    
+    if x == 2:
+        if random_number % 2 == 0:
+            print("Even")
+        else:
+            print("Odd")
+            
+    if random_number - 5 <= num <= random_number + 5:
+        print("close")
+    
+if win == False:
+    print("Game Over!")
+    print("correct answer {}".format(random_number))
