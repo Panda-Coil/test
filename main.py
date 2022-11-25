@@ -1,10 +1,26 @@
 list_of_numbers = [1, 8, 9, 4, 6, 2, 11, 0, 13, 5, 15, 7, 10, 14, 12, 3]
-print(len(list_of_numbers))
 
 class Sorts():
-    def bubble_sort(list):
-        print("original list:{list}")
-        length = len(list_of_numbers)
+    def bubble_sort(given_list):
+        print("original list:{given_list}".format)
+        changes = 1
+        while True:
+            if changes != 0:
+                changes = 0
+                counter = 0
+                old_number = given_list[0]
+                for number in given_list:
+                    if old_number > number:
+                        given_list[counter] = old_number
+                        given_list[counter - 1] = number
+                        changes += 1
+                    old_number = number
+                    counter += 1
+                print(given_list)
+            else:
+                break
+        return given_list
+            
     
 
 class RandomShit():
@@ -35,7 +51,8 @@ class RandomShit():
     
 
 
-print(RandomShit.double(list_of_numbers))
+
 
 num = Sorts.bubble_sort(list_of_numbers)
 print(num)
+
