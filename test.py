@@ -1,1 +1,7 @@
-list_of_numbers = [1, 8, 9, 4, 6, 2, 11, 0, 13, 5, 15, 7, 10, 14, 12, 3]
+list_of_numbers = [24, 16, 13, 12, 10, 9, 7, 6, 5, 3, 1, 0]
+user_input = input("insert number >")
+input1 = str(user_input)
+
+
+def locate_card(cards, query):
+    pass
