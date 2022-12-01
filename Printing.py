@@ -7,15 +7,21 @@ import fpdf
 import os
 import time
 import subprocess
+import sys
 
+#gets the original directory
+origWD = os.getcwd()
+
+#directories
 folderpath = r"/Users/kane/Desktop/work/tax/22_gensen_pdf/"
 program = r"/System/Applications/Preview.app"
 
-file_paths  = [os.path.join(folderpath, name) for name in os.listdir(folderpath)]
-all_files = {}
+os.chdir(folderpath)
 
-file = r"/Users/kane/Desktop/work/tax/22_gensen_pdf/June.pdf"
+subprocess.run("ls")
+subprocess.Popen("April.pdf")
 
-opened_file = subprocess.Popen([program, file])
+#makes a list for all file paths
+
 
 #for path in file_paths:
