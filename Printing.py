@@ -1,7 +1,5 @@
-#10min x 3
-#20min x 3
 #Python Pillow https://www.youtube.com/watch?v=REMyfaLvkkE
-#pink
+#For maximum reliability, use a fully qualified path for the executable
 
 import fpdf
 import os
@@ -16,12 +14,15 @@ origWD = os.getcwd()
 folderpath = r"/Users/kane/Desktop/work/tax/22_gensen_pdf/"
 program = r"/System/Applications/Preview.app"
 
+#changes directory to the file
 os.chdir(folderpath)
 
-subprocess.run("ls")
-subprocess.Popen("April.pdf")
+#makes a list for all files
+files = [name for name in os.listdir(folderpath)]
+print(files)
+      
+#prints each file
+for name in files:
+    subprocess.call(('open', name))
 
-#makes a list for all file paths
 
-
-#for path in file_paths:

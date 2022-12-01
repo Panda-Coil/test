@@ -5,3 +5,6 @@ input1 = str(user_input)
 
 def locate_card(cards, query):
     pass
+
+
+#file_paths  = [os.path.join(folderpath, name) for name in os.listdir(folderpath)]
