@@ -47,9 +47,21 @@ class RandomShit():
                 tries += 1
             if tries == len(given_list):
                 return False
-
+            
+    def Printing(Directory):
+        import os
+        #gets the original directory
+        origWD = os.getcwd()
+        os.chdir(Directory)
+        #prints each file
+        files = ["lp " + name for name in os.listdir(Directory)]
+        for name in files: 
+            os.system(name)
+        #reset directory
+        os.chdir = origWD
+        
     
-
+    
 
 
 
