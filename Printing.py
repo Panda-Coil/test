@@ -5,7 +5,7 @@ import fpdf
 import os
 import time
 import subprocess
-import sys
+import shlex
 
 #gets the original directory
 origWD = os.getcwd()
@@ -23,6 +23,11 @@ print(files)
       
 #prints each file
 for name in files:
-    subprocess.call(('open', name))
+    #subprocess.call(('open', name))
+    subprocess.call("lp -p", name)
+    
+    
+    #os.startfile(name, "print")
+    #os.open(name, 'print')
 
 
