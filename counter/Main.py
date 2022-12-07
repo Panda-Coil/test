@@ -1,30 +1,31 @@
-users = {"test":9}
+import json
+from Methods import User as u
 
-class User:
+
+def load():
+    with open("data.json", "r") as f:
+        data = json.load(f)
+        return data
     
-    def __init__(self, name, count):
-        self.name = name
-        self.count = count
+def dump(data):
+    with open("data.json", "w") as f:
+        json.dump(data, f)
         
-    def add():
-        count += 1
-        
-    def subtract():
-        count -= 1
-        
-    def reset():
-        count = 0
 
 
 def ask_name():
     name = input("enter name:")
-    if name in users:
-        print(users[name])
-        User(name, users[name])
+    data = load()
+    if name in data:
+        n = u(name, data[name])
     else:
-        users[name] = 0
+        n = u(name, 0)
+        print(data[name])
+    return name
         
-ask_name()
+Name = ask_name()
+
+        
         
 
 
