@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def Hi(request):
-    return HttpResponse("Hello")
+def hi(request):
+    return render(request, "count.html")
 
 
