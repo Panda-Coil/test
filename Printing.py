@@ -1,14 +1,13 @@
 #Python Pillow https://www.youtube.com/watch?v=REMyfaLvkkE
 #For maximum reliability, use a fully qualified path for the executable
-
-import fpdf
 import os
 
 #gets the original directory
 origWD = os.getcwd()
 
-#directories
-folderpath = r"/Users/kane/Desktop/work/tax/22_gensen_pdf/"
+#askes fir directories
+userin = input(r"directory>")
+folderpath = userin
 #changes directory to the file
 os.chdir(folderpath)
 
